@@ -1,7 +1,7 @@
 # Node-Play-by-Play-Test
 
 ## Overview
-This is an simple example of Node.js app from Pluralsight course: Play by Play: Building a Node Web API with Sam Artioli and John Papa.
+This is a simple example of Node.js app from Pluralsight course: Play by Play: Building a Node Web API with Sam Artioli and John Papa.
 
 ## Requirement
 * [Node.js](https://nodejs.org/) for server.
