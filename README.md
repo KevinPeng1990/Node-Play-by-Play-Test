@@ -23,6 +23,6 @@ This is an simple example of Node.js app from Pluralsight course: Play by Play: 
   * `node duck_server.js`
   * `node pet_server.js`
 
-4. Using [Forever](https://github.com/foreverjs/forever) to start all 3 server in 1 command prompt is recommended.
+4. Using [Forever](https://github.com/foreverjs/forever) to start all 3 servers in 1 command prompt is recommended.
 
 5. You can use [nodemon](https://github.com/remy/nodemon) to start node server for development.
