@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-var pigs = require('./routes/pig.js')(app);
+var pigRoutes = require('./routes/pig.js')(app);
 
 var server = app.listen(3000, function () {
 	console.log('Server running at http://127.0.0.1:3000/');

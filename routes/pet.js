@@ -13,15 +13,26 @@ module.exports = function(app) {
 
 		async.parallel({
 			pig: function(callback){
-				r({uri: 'http://localhost:3000/pig'}, function(error, response, body) {
-					if (error) {
-						callback({service: 'pig', error: error});
-						return;
-					};
-					if (!error && response.statusCode === 200) {
-						callback(null, body.data);
+				client.get('http://localhost:3000/pig', function(error, pig){
+					if (error) {throw error;};
+					if (pig) {
+						callback(null, JSON.parse(pig));
 					} else {
-						callback(response.statusCode);
+						r({uri: 'http://localhost:3000/pig'}, function(error, response, body) {
+							if (error) {
+								callback({service: 'pig', error: error});
+								return;
+							};
+							if (!error && response.statusCode === 200) {
+								callback(null, body.data);
+								//client.set('http://localhost:3000/pig', JSON.stringify(body.data), function (error) {
+								client.setex('http://localhost:3000/pig', 10, JSON.stringify(body.data), function (error){
+									if (error) {throw error;};
+								});
+							} else {
+								res.send(response.statusCode);
+							}
+						});
 					}
 				});
 			},

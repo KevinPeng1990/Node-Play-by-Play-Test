@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-var pigRoutes = require('./routes/duck.js')(app);
+var duckRoutes = require('./routes/duck.js')(app);
 
 var server = app.listen(3001, function (){
 	console.log('Server running at http://127.0.0.1:3001/');

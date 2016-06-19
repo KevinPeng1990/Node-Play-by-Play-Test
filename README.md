@@ -26,3 +26,7 @@ This is a simple example of Node.js app from Pluralsight course: Play by Play: B
 4. Using [Forever](https://github.com/foreverjs/forever) to start all 3 servers in 1 command prompt is recommended.
 
 5. You can use [nodemon](https://github.com/remy/nodemon) to start node server for development.
+
+## Reference
+1. [node-web-api](https://github.com/samartioli/node-web-api) by Sam Artioli.
+2. [node-play-by-play](https://github.com/samartioli/node-play-by-play) by Sam Artioli.
